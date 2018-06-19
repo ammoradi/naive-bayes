@@ -1,0 +1,36 @@
+{
+ "name": "naive-bayes",
+  "description": "Naive Bayes Classifier for node.js",
+  "version": "0.0.1",
+  "author": "AmirMohammad Moradi",
+  "keywords": [
+    "naive",
+    "bayes",
+    "categorize",
+    "classify",
+    "classifier"
+  ],
+  "dependencies": {
+    "persian-text": "^0.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^3.1.1",
+    "nodemon": "^1.9.2",
+    "mocha": ">=0.8.1"
+  },
+  "main": "dist",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ammoradi/naive-bayes.git"
+  },
+  "scripts": {
+    "dev": "nodemon -w src --exec \"babel-node src --presets,stage-0\"",
+    "build": "babel src -s -D -d dist --presets es2015,stage-0",
+    "start": "node dist",
+    "test": "mocha -t 30000 -R spec"
+  }
+}
